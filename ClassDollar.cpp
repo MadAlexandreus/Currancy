@@ -26,14 +26,14 @@ void DollarInteractionFunction()
 		{
 			system("cls");
 
-			cout << std::setw(92) << std::left << "Выберите, что вы хотите сделать:" << endl << endl;
-			cout << std::setw(92) << std::left << "Получить полное количество валюты" << "1" << endl << endl;
-			cout << std::setw(92) << std::left << "Получить разбиение валюты по разым курсам" << "2" << endl << endl;
-			cout << std::setw(92) << std::left << "Рассчитать рекомендованный обменный курс для конкретной покупки (Желательно знать индекс)" << "3" << endl << endl;
-			cout << std::setw(92) << std::left << "Рассчитать рекомендованный обменный курс для всей суммы" << "4" << endl << endl;
-			cout << std::setw(92) << std::left << "Добавить новую покупку" << "5" << endl << endl;
-			cout << std::setw(92) << std::left << "Удалить покупку по конкретному индексу" << "6" << endl << endl;
-			cout << std::setw(92) << std::left << "Очистить все данные" << "7" << endl << endl;
+			cout << std::setw(92) << std::left << "Г‚Г»ГЎГҐГ°ГЁГІГҐ, Г·ГІГ® ГўГ» ГµГ®ГІГЁГІГҐ Г±Г¤ГҐГ«Г ГІГј:" << endl << endl;
+			cout << std::setw(92) << std::left << "ГЏГ®Г«ГіГ·ГЁГІГј ГЇГ®Г«Г­Г®ГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГўГ Г«ГѕГІГ»" << "1" << endl << endl;
+			cout << std::setw(92) << std::left << "ГЏГ®Г«ГіГ·ГЁГІГј Г°Г Г§ГЎГЁГҐГ­ГЁГҐ ГўГ Г«ГѕГІГ» ГЇГ® Г°Г Г§Г»Г¬ ГЄГіГ°Г±Г Г¬" << "2" << endl << endl;
+			cout << std::setw(92) << std::left << "ГђГ Г±Г±Г·ГЁГІГ ГІГј Г°ГҐГЄГ®Г¬ГҐГ­Г¤Г®ГўГ Г­Г­Г»Г© Г®ГЎГ¬ГҐГ­Г­Г»Г© ГЄГіГ°Г± Г¤Г«Гї ГЄГ®Г­ГЄГ°ГҐГІГ­Г®Г© ГЇГ®ГЄГіГЇГЄГЁ (Г†ГҐГ«Г ГІГҐГ«ГјГ­Г® Г§Г­Г ГІГј ГЁГ­Г¤ГҐГЄГ±)" << "3" << endl << endl;
+			cout << std::setw(92) << std::left << "ГђГ Г±Г±Г·ГЁГІГ ГІГј Г°ГҐГЄГ®Г¬ГҐГ­Г¤Г®ГўГ Г­Г­Г»Г© Г®ГЎГ¬ГҐГ­Г­Г»Г© ГЄГіГ°Г± Г¤Г«Гї ГўГ±ГҐГ© Г±ГіГ¬Г¬Г»" << "4" << endl << endl;
+			cout << std::setw(92) << std::left << "Г„Г®ГЎГ ГўГЁГІГј Г­Г®ГўГіГѕ ГЇГ®ГЄГіГЇГЄГі" << "5" << endl << endl;
+			cout << std::setw(92) << std::left << "Г“Г¤Г Г«ГЁГІГј ГЇГ®ГЄГіГЇГЄГі ГЇГ® ГЄГ®Г­ГЄГ°ГҐГІГ­Г®Г¬Гі ГЁГ­Г¤ГҐГЄГ±Гі" << "6" << endl << endl;
+			cout << std::setw(92) << std::left << "ГЋГ·ГЁГ±ГІГЁГІГј ГўГ±ГҐ Г¤Г Г­Г­Г»ГҐ" << "7" << endl << endl;
 
 			getInt(switchValue);
 		} while (switchValue != 1 && switchValue != 2 && switchValue != 3 && switchValue != 4 && switchValue != 5 && switchValue != 6 && switchValue != 7);
@@ -43,7 +43,7 @@ void DollarInteractionFunction()
 
 		if (switchValue == 1)
 		{
-			cout << "Полное количество валюты:" << endl << object.getTotalAmount() << endl << endl;
+			cout << "ГЏГ®Г«Г­Г®ГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГўГ Г«ГѕГІГ»:" << endl << object.getTotalAmount() << endl << endl;
 
 		}
 		else if (switchValue == 2)
@@ -60,14 +60,14 @@ void DollarInteractionFunction()
 			int index = 0;
 			if (object.getSIZE() == 0)
 			{
-				cout << "Нет данных" << endl;
+				cout << "ГЌГҐГІ Г¤Г Г­Г­Г»Гµ" << endl;
 				return;
 			}
 
 			do
 			{
 				system("cls");
-				cout << "Введите индекс" << endl;
+				cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ­Г¤ГҐГЄГ±" << endl;
 
 				getInt(index);
 
@@ -77,41 +77,41 @@ void DollarInteractionFunction()
 			if (std::filesystem::exists(object.getDirectoryPath()))
 			{
 				if (object.getDirectoryPath().empty()) {
-					cout << "Нет данных" << endl;
+					cout << "ГЌГҐГІ Г¤Г Г­Г­Г»Гµ" << endl;
 					return;
 				}
 			}
 			else
 			{
-				cout << "Нет данных" << endl;
+				cout << "ГЌГҐГІ Г¤Г Г­Г­Г»Гµ" << endl;
 				return;
 			}
 
-			cout << "Рекомендованный обменный курс для конкретной покупки:" << endl << object.CalcRecExchange(index) << endl << endl;
+			cout << "ГђГҐГЄГ®Г¬ГҐГ­Г¤Г®ГўГ Г­Г­Г»Г© Г®ГЎГ¬ГҐГ­Г­Г»Г© ГЄГіГ°Г± Г¤Г«Гї ГЄГ®Г­ГЄГ°ГҐГІГ­Г®Г© ГЇГ®ГЄГіГЇГЄГЁ:" << endl << object.CalcRecExchange(index) << endl << endl;
 		}
 		else if (switchValue == 4)
 		{
 			if (std::filesystem::exists(object.getDirectoryPath()))
 			{
 				if (object.getDirectoryPath().empty()) {
-					cout << "Нет данных" << endl;
+					cout << "ГЌГҐГІ Г¤Г Г­Г­Г»Гµ" << endl;
 					return;
 				}
 			}
 			else
 			{
-				cout << "Нет данных" << endl;
+				cout << "ГЌГҐГІ Г¤Г Г­Г­Г»Гµ" << endl;
 				return;
 			}
 
-			cout << "Рекомендованный обменный курс для всей суммы" << endl << object.CalcTotalRecExchange() << endl << endl;
+			cout << "ГђГҐГЄГ®Г¬ГҐГ­Г¤Г®ГўГ Г­Г­Г»Г© Г®ГЎГ¬ГҐГ­Г­Г»Г© ГЄГіГ°Г± Г¤Г«Гї ГўГ±ГҐГ© Г±ГіГ¬Г¬Г»" << endl << object.CalcTotalRecExchange() << endl << endl;
 		}
 		else if (switchValue == 5)
 		{
-			cout << "Если вы хотите внести новую сумму по старому курсу ввдедите <Old>, для новой суммы -- <New>" << endl;
+			cout << "Г…Г±Г«ГЁ ГўГ» ГµГ®ГІГЁГІГҐ ГўГ­ГҐГ±ГІГЁ Г­Г®ГўГіГѕ Г±ГіГ¬Г¬Гі ГЇГ® Г±ГІГ Г°Г®Г¬Гі ГЄГіГ°Г±Гі ГўГўГ¤ГҐГ¤ГЁГІГҐ <Old>, Г¤Г«Гї Г­Г®ГўГ®Г© Г±ГіГ¬Г¬Г» -- <New>" << endl;
 
 			string Modifier;
-			cin >> Modifier;				//пока хз как лучше переписать и переписывать ли
+			cin >> Modifier;				//ГЇГ®ГЄГ  ГµГ§ ГЄГ ГЄ Г«ГіГ·ГёГҐ ГЇГҐГ°ГҐГЇГЁГ±Г ГІГј ГЁ ГЇГҐГ°ГҐГЇГЁГ±Г»ГўГ ГІГј Г«ГЁ
 
 			for (size_t i = 0; i < Modifier.size(); i++)
 			{
@@ -119,20 +119,20 @@ void DollarInteractionFunction()
 			}
 
 			system("cls");
-			object.addPurchase(Modifier);
+			object.AddPurchase(Modifier);
 		}
 		else if (switchValue == 6)
 		{
 			int index;
 			if (object.getSIZE() == 0)
 			{
-				cout << "Нет данных" << endl;
+				cout << "ГЌГҐГІ Г¤Г Г­Г­Г»Гµ" << endl;
 				return;
 			}
 			do
 			{
 				system("cls");
-				cout << "Введите индекс" << endl;
+				cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ­Г¤ГҐГЄГ±" << endl;
 
 				getInt(index);
 
@@ -144,12 +144,12 @@ void DollarInteractionFunction()
 		else if (switchValue == 7)
 		{
 			object.TotalReset(object);
-			cout << "Все данные очищены" << endl << endl;
+			cout << "Г‚Г±ГҐ Г¤Г Г­Г­Г»ГҐ Г®Г·ГЁГ№ГҐГ­Г»" << endl << endl;
 		}
 
 		do
 		{
-			cout << "Хотите продолжить?\nДля продолжения введите Y, для завершения программы введите N" << endl << endl;
+			cout << "Г•Г®ГІГЁГІГҐ ГЇГ°Г®Г¤Г®Г«Г¦ГЁГІГј?\nГ„Г«Гї ГЇГ°Г®Г¤Г®Г«Г¦ГҐГ­ГЁГї ГўГўГҐГ¤ГЁГІГҐ Y, Г¤Г«Гї Г§Г ГўГҐГ°ГёГҐГ­ГЁГї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г» ГўГўГҐГ¤ГЁГІГҐ N" << endl << endl;
 
 			getChar(Continuevalue);
 		} while (Continuevalue != 'n' && Continuevalue != 'N' && Continuevalue != 'y' && Continuevalue != 'Y');
