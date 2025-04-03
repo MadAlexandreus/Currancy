@@ -37,7 +37,7 @@ public:
 	void setNewAmountVal(double value) { Amount.push_back(value); }
 	void setNewExchangeVal(double value) { Exchange.push_back(value); }
 
-	void addPurchase(string Modifier);
+	void AddPurchase(string Modifier);
 
 	double CalcRecExchange(int index);
 
