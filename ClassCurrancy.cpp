@@ -3,7 +3,7 @@
 using namespace std;
 using namespace std::filesystem;
 
-void Currancy::addPurchase(string Modifier)
+void Currancy::AddPurchase(string Modifier)
 {
 	
 	if (Modifier == "OLD")
@@ -11,7 +11,7 @@ void Currancy::addPurchase(string Modifier)
 		if (Amount.size() == 0 && Exchange.size() == 0)
 		{
 			system("cls");
-			cout << "Ó âàñ íåò áîëåå ñòàðûõ ïîêóïîê, âîéäèòå áåç ìîäèôèêàòîðà" << endl << endl;
+			cout << "Ã“ Ã¢Ã Ã± Ã­Ã¥Ã² Ã¡Ã®Ã«Ã¥Ã¥ Ã±Ã²Ã Ã°Ã»Ãµ Ã¯Ã®ÃªÃ³Ã¯Ã®Ãª, Ã¢Ã®Ã©Ã¤Ã¨Ã²Ã¥ Ã¡Ã¥Ã§ Ã¬Ã®Ã¤Ã¨Ã´Ã¨ÃªÃ Ã²Ã®Ã°Ã " << endl << endl;
 			return;
 		}
 		if (Amount.size() >= 2)
@@ -21,7 +21,7 @@ void Currancy::addPurchase(string Modifier)
 			do
 			{
 				system("cls");
-				cout << "Ó âàñ åñòü íåñêîëüêî ïîêóïîê ñ ðàçíûìè êóðñàìè, ïîæàëóéñòà, ââäåäèòå æåëàåìûé êóðñ\n";
+				cout << "Ã“ Ã¢Ã Ã± Ã¥Ã±Ã²Ã¼ Ã­Ã¥Ã±ÃªÃ®Ã«Ã¼ÃªÃ® Ã¯Ã®ÃªÃ³Ã¯Ã®Ãª Ã± Ã°Ã Ã§Ã­Ã»Ã¬Ã¨ ÃªÃ³Ã°Ã±Ã Ã¬Ã¨, Ã¯Ã®Ã¦Ã Ã«Ã³Ã©Ã±Ã²Ã , Ã¢Ã¢Ã¤Ã¥Ã¤Ã¨Ã²Ã¥ Ã¦Ã¥Ã«Ã Ã¥Ã¬Ã»Ã© ÃªÃ³Ã°Ã±\n";
 				 
 				getDouble(Exch);
 			} while (Exch < 0);
@@ -29,7 +29,7 @@ void Currancy::addPurchase(string Modifier)
 
 			system("cls");
 
-			cout << "Ñïàñèáî" << endl << endl;
+			cout << "Ã‘Ã¯Ã Ã±Ã¨Ã¡Ã®" << endl << endl;
 
 			for (int i = 0; i < Exchange.size(); i++)
 			{
@@ -39,7 +39,7 @@ void Currancy::addPurchase(string Modifier)
 					do
 					{
 						system("cls");
-						cout << "Ââåäèòå êîëè÷åñâî" << endl;
+						cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã¢Ã®" << endl;
 
 						getDouble(temp);
 					} while (temp < 0);
@@ -57,7 +57,7 @@ void Currancy::addPurchase(string Modifier)
 			do
 			{
 				system("cls");
-				cout << "Ââåäèòå êîëè÷åñâî" << endl;
+				cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã¢Ã®" << endl;
 
 				getDouble(temp);
 			} while (temp < 0);
@@ -74,7 +74,7 @@ void Currancy::addPurchase(string Modifier)
 		do
 		{
 			system("cls");
-			cout << "Ââåäèòå êîëè÷åñâî" << endl;
+			cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã¢Ã®" << endl;
 
 			getDouble(temp);
 		} while (temp < 0);
@@ -86,7 +86,7 @@ void Currancy::addPurchase(string Modifier)
 		do
 		{
 			system("cls");
-			cout << "Ââåäèòå êóðñ âàëþòû" << endl;
+			cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ³Ã°Ã± Ã¢Ã Ã«Ã¾Ã²Ã»" << endl;
 
 			getDouble(temp);
 		} while (temp < 0);
@@ -96,7 +96,7 @@ void Currancy::addPurchase(string Modifier)
 	}
 	else
 	{
-		cout << "Òàêîãî ìîäèôèêàòîðà íåò" << endl;
+		cout << "Ã’Ã ÃªÃ®Ã£Ã® Ã¬Ã®Ã¤Ã¨Ã´Ã¨ÃªÃ Ã²Ã®Ã°Ã  Ã­Ã¥Ã²" << endl;
 		return;
 	}
 }
